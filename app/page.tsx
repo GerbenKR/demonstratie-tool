@@ -254,23 +254,23 @@ export default function Home() {
                 {/* Gebruiker C */}
                 <div>
                     <div className="flex items-center gap-1">
-                        <input type="checkbox" id="4" />
-                        <label htmlFor="4">Gebruiker C</label>
+                        <input type="checkbox" id="8" />
+                        <label htmlFor="8">Gebruiker C</label>
                     </div>
 
                     <div className="ml-5">
                         <div className="flex items-center gap-1">
-                            <input type="checkbox" id="5" />
-                            <label htmlFor="5">Is Verkoper</label>
+                            <input type="checkbox" id="9" />
+                            <label htmlFor="9">Is Verkoper</label>
                         </div>
                         <div className="flex items-center gap-1">
-                            <input type="checkbox" id="6" />
-                            <label htmlFor="6">Heeft veiling (Veiling C: Prullenbak)</label>
+                            <input type="checkbox" id="10" />
+                            <label htmlFor="10">Heeft veiling (Veiling C: Prullenbak)</label>
                         </div>
                         <div className="ml-5">
                             <div className="flex items-center gap-1">
-                                <input type="checkbox" id="6" />
-                                <label htmlFor="6">Heeft hoogste bod</label>
+                                <input type="checkbox" id="11" />
+                                <label htmlFor="11">Heeft hoogste bod</label>
                             </div>
                         </div>
                     </div>
