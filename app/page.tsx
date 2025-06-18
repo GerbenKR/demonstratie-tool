@@ -1,103 +1,308 @@
-import Image from "next/image";
+import CopyValue from '@/components/CopyValue';
+
+// const flowList = [
+//     {
+//         title: 'Website doorklikken',
+//         values: [],
+//     },
+//     {
+//         title: 'Account registreren',
+//         values: [
+//             [
+//                 { title: 'Gebruikersnaam', value: 'test123123123' },
+//                 { title: 'Gebruikersnaam', value: 'test123123123' },
+//             ],
+//             [
+//                 { title: 'Straat', value: 'test123123123' },
+//                 { title: 'Huisnummer', value: 'test123123123' },
+//                 { title: 'Plaats', value: 'test123123123' },
+//                 { title: 'Land', value: 'test123123123' },
+//             ],
+//         ],
+//     },
+// ];
+
+const flowList = [
+    {
+        title: 'Niet ingelogd: Website doorklikken',
+        values: [],
+    },
+    {
+        title: 'Gebruiker A (Liza): Account registreren',
+        values: [
+            [{ title: 'E-mailadres', value: 'lisa.jansen@email.nl' }],
+            [
+                { title: 'Gebruikersnaam', value: 'lisajansen' },
+                { title: 'Wachtwoord', value: 'password123' },
+                { title: 'Herhaal wachtwoord', value: 'password123' },
+            ],
+            [
+                { title: 'Voornaam', value: 'Lisa' },
+                { title: 'Achternaam', value: 'Jansen' },
+                { title: 'Adresregel  1', value: 'Kerkstraat 12' },
+                { title: 'Postcode', value: '1234 AB' },
+                { title: 'Plaats', value: 'Utrecht' },
+                { title: 'Staat/Provincie', value: 'Utrecht' },
+                { title: 'Land', value: 'Nederland' },
+                { title: 'Telefoonnummer 1', value: '0612345678' },
+                { title: 'Geboortedatum', value: '11-11-2001' },
+                // { title: 'Beveiligingsvraag', value: 'Wat is de naam van je eerste huisdier?' },
+                { title: 'Antwoord', value: 'Freddie' },
+            ],
+        ],
+    },
+    {
+        title: 'Gebruiker A (Liza): Inloggen',
+        values: [
+            [
+                { title: 'E-mail', value: 'lisa.jansen@email.nl' },
+                { title: 'Wachtwoord', value: 'password123' },
+            ],
+        ],
+    },
+    {
+        title: 'Gebruiker A (Liza): Profielpagina tonen',
+        values: [],
+    },
+    {
+        title: 'Gebruiker A (Liza): Verkopersaccount activeren',
+        values: [
+            [{ title: 'E-mailadres', value: 'lisa.jansen@email.nl' }],
+            [
+                { title: 'Banknaam', value: 'Rabobank' },
+                { title: 'Rekeningnummer', value: 'NL12BANK0123456789' },
+                { title: 'Creditcardnummer', value: '1234 5678 9012 3456' },
+            ],
+        ],
+    },
+    {
+        title: 'Gebruiker A (Liza): Veiling A aanmaken',
+        values: [
+            [
+                { title: 'Titel', value: 'Televisie' },
+                {
+                    title: 'Beschrijving',
+                    value: 'Een grote van volgens mij Samsung, paar jaar lang gebruikt, maar heb nu een nieuwe TV',
+                },
+                { title: 'Rubriek', value: "Consumentenelektronica -> Beeld -> TV's " },
+                { title: 'Startbod', value: '150' },
+                { title: 'Conditie', value: 'Gebruikt, maar in goede staat' },
+                { title: 'Veilingduur', value: '7 dagen' },
+            ],
+        ],
+    },
+    {
+        title: 'SQL: Voeg 4 biedingen toe op Veiling A (stimulatie)',
+        values: [],
+    },
+    {
+        title: 'Gebruiker A (Liza): Telefoonnummer aanpassen',
+        values: [
+            [
+                {
+                    title: 'Nieuw telefoonnummer',
+                    value: '06987654321',
+                },
+            ],
+        ],
+    },
+    {
+        title: 'SQL: Pas eindtijd van Veiling A aan naar 2 minuten',
+        values: [],
+    },
+    {
+        title: 'Gebruiker B: Naar profielpagina',
+        values: [],
+    },
+    {
+        title: 'Gebruiker B: Laten zien dat Veiling B actief is zonder biedingen',
+        values: [],
+    },
+    {
+        title: 'Gebruiker B: Zoeken naar Veiling A via zoekfunctie',
+        values: [],
+    },
+    {
+        title: 'Gebruiker B: Biedt op Veiling A (hoogste bod)',
+        values: [],
+    },
+    {
+        title: 'Veiling A verloopt, tonen dat deze is verlopen',
+        values: [],
+    },
+    {
+        title: 'Mail: Verlopen Veiling A emails tonen in MailHog',
+        values: [],
+    },
+    {
+        title: 'Gebruiker B: Feedback geven via mail',
+        values: [
+            [
+                { title: 'Tevredenheid', value: 'Positief' },
+                { title: 'Commentaar', value: 'Aardige vrouw, mooie televisie' },
+            ],
+        ],
+    },
+    {
+        title: 'SQL: Pas eindtijd van Veiling B aan naar 1 minuut',
+        values: [],
+    },
+    {
+        title: 'Gebruiker A (Liza): Zoekt naar Veiling B onder "bijna geëindigd"',
+        values: [],
+    },
+    {
+        title: 'Gebruiker A (Liza): Geen bod uitbrengen op Veiling B',
+        values: [],
+    },
+    {
+        title: 'Veiling B verloopt, tonen dat deze is verlopen',
+        values: [],
+    },
+    {
+        title: 'Mail: Verlopen Veiling B emails tonen in MailHog',
+        values: [],
+    },
+    {
+        title: 'Gebruiker B: Uitloggen',
+        values: [],
+    },
+    {
+        title: 'Beheerder: Inloggen',
+        values: [],
+    },
+    {
+        title: 'Beheerder: Site verkennen (geen biedknoppen etc.)',
+        values: [],
+    },
+    {
+        title: 'Beheer: Dashboard tonen',
+        values: [],
+    },
+    {
+        title: 'Beheerder: Veiling C (antieke prullenbak) blokkeren via veilingenbeheer',
+        values: [[{ title: 'Reden', value: 'Gestolen producten mogen niet verkocht worden. ' }]],
+    },
+    {
+        title: 'Mail: Mails over geblokkeerde veiling',
+        values: [],
+    },
+    {
+        title: 'Beheerder: Subrubriek aanmaken',
+        values: [],
+    },
+    {
+        title: 'Beheerder: Subrubriek controle voor het aanmaken',
+        values: [[{ title: 'Rubriek controle naam', value: 'Interieur' }]],
+    },
+    {
+        title: 'Beheerder: Subrubriek toevoegen aan Huis en Tuin',
+        values: [[{ title: 'Naam', value: 'Interieur' }]],
+    },
+    {
+        title: 'Beheerder: Logboek bekijken',
+        values: [],
+    },
+];
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    return (
+        <div className="max-w-[800px] w-full mx-auto">
+            <div className="py-5 mb-10 border-b border-slate-300">
+                <h1 className="text-3xl font-bold">Demo tool</h1>
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {/* Checklist */}
+            <div className="mb-10">
+                <h2 className="mb-2 text-2xl font-semibold">Pre-conditie checklist</h2>
+                <div className="flex items-center gap-1">
+                    <input type="checkbox" id="1" />
+                    <label htmlFor="1">Browsers openen (Brave, Edge)</label>
+                </div>
+                <div className="flex items-center gap-1">
+                    <input type="checkbox" id="2" />
+                    <label htmlFor="2">MailHog ingelogd in de browsers</label>
+                </div>
+                <div className="flex items-center gap-1">
+                    <input type="checkbox" id="3" />
+                    <label htmlFor="3">MailHog geleegd</label>
+                </div>
+
+                {/* Gebruiker B */}
+                <div>
+                    <div className="flex items-center gap-1">
+                        <input type="checkbox" id="4" />
+                        <label htmlFor="4">Gebruiker B</label>
+                    </div>
+
+                    <div className="ml-5">
+                        <div className="flex items-center gap-1">
+                            <input type="checkbox" id="5" />
+                            <label htmlFor="5">Is Verkoper</label>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <input type="checkbox" id="6" />
+                            <label htmlFor="6">Heeft veiling (Veiling B: Schoenendoos)</label>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <input type="checkbox" id="7" />
+                            <label htmlFor="7">Ingelogd in Browser edge</label>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Gebruiker C */}
+                <div>
+                    <div className="flex items-center gap-1">
+                        <input type="checkbox" id="4" />
+                        <label htmlFor="4">Gebruiker C</label>
+                    </div>
+
+                    <div className="ml-5">
+                        <div className="flex items-center gap-1">
+                            <input type="checkbox" id="5" />
+                            <label htmlFor="5">Is Verkoper</label>
+                        </div>
+                        <div className="flex items-center gap-1">
+                            <input type="checkbox" id="6" />
+                            <label htmlFor="6">Heeft veiling (Veiling C: Prullenbak)</label>
+                        </div>
+                        <div className="ml-5">
+                            <div className="flex items-center gap-1">
+                                <input type="checkbox" id="6" />
+                                <label htmlFor="6">Heeft hoogste bod</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 className="mb-2 text-2xl font-semibold">Flow</h2>
+
+                {flowList.map((step, index) => (
+                    <div key={index} className="mt-5">
+                        <h3 className="font-medium">
+                            {index + 1}. {step.title}
+                        </h3>
+                        {step.values.length > 0 && (
+                            <div className="mt-1 space-y-4">
+                                {step.values.map((group, groupIndex) => (
+                                    <div key={groupIndex} className="">
+                                        {group.map((item, itemIndex) => (
+                                            <CopyValue
+                                                key={itemIndex}
+                                                title={item.title}
+                                                value={item.value}
+                                            />
+                                        ))}
+                                    </div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                ))}
+            </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    );
 }
