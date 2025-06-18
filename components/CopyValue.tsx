@@ -23,7 +23,7 @@ export default function CopyValue({ title, value }: CopyValueProps) {
     };
 
     return (
-        <div className="grid grid-cols-4">
+        <div className="grid grid-cols-4 rounded overflow-hidden">
             <div
                 className={`col-span-1 p-2 text-sm  duration-100 ${
                     alreadyCopied ? 'bg-green-300' : 'bg-slate-100'
