@@ -169,7 +169,12 @@ const flowList = [
     },
     {
         title: 'Beheerder: Inloggen',
-        values: [],
+        values: [
+            [
+                { title: 'E-mail', value: 'Administrator@EenmaalAndermaal.nl' },
+                { title: 'Wachtwoord', value: '1553CR3T!' },
+            ],
+        ],
     },
     {
         title: 'Beheerder: Site verkennen (geen biedknoppen etc.)',
