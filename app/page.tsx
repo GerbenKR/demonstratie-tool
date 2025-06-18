@@ -76,7 +76,7 @@ const flowList = [
         ],
     },
     {
-        title: 'Gebruiker A (Liza): Veiling A aanmaken',
+        title: 'Gebruiker A (Liza): Veiling A (Televisie) aanmaken',
         values: [
             [
                 { title: 'Titel', value: 'Televisie' },
@@ -92,7 +92,7 @@ const flowList = [
         ],
     },
     {
-        title: 'SQL: Voeg 4 biedingen toe op Veiling A (stimulatie)',
+        title: 'SQL: Voeg 4 biedingen toe op Veiling A (Televisie) (stimulatie)',
         values: [],
     },
     {
@@ -107,35 +107,35 @@ const flowList = [
         ],
     },
     {
-        title: 'SQL: Pas eindtijd van Veiling A aan naar 2 minuten',
+        title: 'SQL: Pas eindtijd van Veiling A (Televisie) aan naar 2 minuten',
         values: [],
     },
     {
-        title: 'Gebruiker B: Naar profielpagina',
+        title: 'Gebruiker B (Mark): Naar profielpagina',
         values: [],
     },
     {
-        title: 'Gebruiker B: Laten zien dat Veiling B actief is zonder biedingen',
+        title: 'Gebruiker B (Mark): Laten zien dat Veiling B (Schoenendoos) actief is zonder biedingen',
         values: [],
     },
     {
-        title: 'Gebruiker B: Zoeken naar Veiling A via zoekfunctie',
+        title: 'Gebruiker B (Mark): Zoeken naar Veiling A (Televisie) via zoekfunctie',
         values: [],
     },
     {
-        title: 'Gebruiker B: Biedt op Veiling A (hoogste bod)',
+        title: 'Gebruiker B (Mark): Biedt op Veiling A (Televisie) (hoogste bod)',
         values: [],
     },
     {
-        title: 'Veiling A verloopt, tonen dat deze is verlopen',
+        title: 'Veiling A (Televisie) verloopt, tonen dat deze is verlopen',
         values: [],
     },
     {
-        title: 'Mail: Verlopen Veiling A emails tonen in MailHog',
+        title: 'Mail: Verlopen Veiling A (Televisie) emails tonen in MailHog',
         values: [],
     },
     {
-        title: 'Gebruiker B: Feedback geven via mail',
+        title: 'Gebruiker B (Mark): Feedback geven via mail',
         values: [
             [
                 { title: 'Tevredenheid', value: 'Positief' },
@@ -144,27 +144,27 @@ const flowList = [
         ],
     },
     {
-        title: 'SQL: Pas eindtijd van Veiling B aan naar 1 minuut',
+        title: 'SQL: Pas eindtijd van Veiling B (Schoenendoos) aan naar 1 minuut',
         values: [],
     },
     {
-        title: 'Gebruiker A (Liza): Zoekt naar Veiling B onder "bijna geëindigd"',
+        title: 'Gebruiker A (Liza): Zoekt naar Veiling B (Schoenendoos) onder "bijna geëindigd"',
         values: [],
     },
     {
-        title: 'Gebruiker A (Liza): Geen bod uitbrengen op Veiling B',
+        title: 'Gebruiker A (Liza): Geen bod uitbrengen op Veiling B (Schoenendoos)',
         values: [],
     },
     {
-        title: 'Veiling B verloopt, tonen dat deze is verlopen',
+        title: 'Veiling B (Schoenendoos) verloopt, tonen dat deze is verlopen',
         values: [],
     },
     {
-        title: 'Mail: Verlopen Veiling B emails tonen in MailHog',
+        title: 'Mail: Verlopen Veiling B (Schoenendoos) emails tonen in MailHog',
         values: [],
     },
     {
-        title: 'Gebruiker B: Uitloggen',
+        title: 'Gebruiker B (Mark): Uitloggen',
         values: [],
     },
     {
@@ -228,11 +228,11 @@ export default function Home() {
                     <label htmlFor="3">MailHog geleegd</label>
                 </div>
 
-                {/* Gebruiker B */}
+                {/* Gebruiker B (Mark) */}
                 <div>
                     <div className="flex items-center gap-1">
                         <input type="checkbox" id="4" />
-                        <label htmlFor="4">Gebruiker B</label>
+                        <label htmlFor="4">Gebruiker B (Mark)</label>
                     </div>
 
                     <div className="ml-5">
@@ -242,7 +242,9 @@ export default function Home() {
                         </div>
                         <div className="flex items-center gap-1">
                             <input type="checkbox" id="6" />
-                            <label htmlFor="6">Heeft veiling (Veiling B: Schoenendoos)</label>
+                            <label htmlFor="6">
+                                Heeft veiling (Veiling B (Schoenendoos): Schoenendoos)
+                            </label>
                         </div>
                         <div className="flex items-center gap-1">
                             <input type="checkbox" id="7" />
@@ -252,7 +254,7 @@ export default function Home() {
                 </div>
 
                 {/* Gebruiker C */}
-                <div>
+                {/* <div>
                     <div className="flex items-center gap-1">
                         <input type="checkbox" id="8" />
                         <label htmlFor="8">Gebruiker C</label>
@@ -274,7 +276,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div>
