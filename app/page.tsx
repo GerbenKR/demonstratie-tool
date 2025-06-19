@@ -258,6 +258,14 @@ export default function Home() {
                     </div>
                 </div>
 
+                {/* Veiling C */}
+                <div>
+                    <div className="flex items-center gap-1">
+                        <input type="checkbox" id="4" />
+                        <label htmlFor="4">Veiling C (Antieke Prullenbak)</label>
+                    </div>
+                </div>
+
                 {/* Gebruiker C */}
                 {/* <div>
                     <div className="flex items-center gap-1">
