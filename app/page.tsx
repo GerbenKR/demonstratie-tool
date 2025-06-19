@@ -261,8 +261,8 @@ export default function Home() {
                 {/* Veiling C */}
                 <div>
                     <div className="flex items-center gap-1">
-                        <input type="checkbox" id="4" />
-                        <label htmlFor="4">Veiling C (Antieke Prullenbak)</label>
+                        <input type="checkbox" id="8" />
+                        <label htmlFor="8">Veiling C (Antieke Prullenbak)</label>
                     </div>
                 </div>
 
