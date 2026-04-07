@@ -11,118 +11,22 @@ import CopyValue from '@/components/CopyValue';
 // },
 const flowList = [
     {
-        title: 'Gebruiker A (Mark): inloggen',
+        title: 'Stap 1: Inloggen als Alice (reiziger)',
         values: [
             [
-                { title: 'E-mail', value: 'mark.boer@email.nl' },
-                { title: 'Wachtwoord', value: 'password123' },
+                { title: 'Gebruikersnaam', value: 'alice' },
+                { title: 'Wachtwoord', value: 'wachtwoord123' },
             ],
         ],
     },
     {
-        title: 'Gebruiker A (Mark): Verkopersaccount activeren',
-        values: [[{ title: 'E-mail', value: 'mark.boer@email.nl' }]],
-    },
-    {
-        title: 'Gebruiker A (Mark): Veiling aanmaken (Televisie)',
+        title: 'Stap 2: Inloggen als Bob (medewerker)',
         values: [
             [
-                { title: 'Titel', value: 'Televisie' },
-                {
-                    title: 'Beschrijving',
-                    value: 'Een grote van volgens mij Samsung, paar jaar lang gebruikt, maar heb nu een nieuwe TV',
-                },
-                { title: 'Rubriek', value: "Consumentenelektronica -> Beeld -> TV's " },
-                { title: 'Startbod', value: '150' },
-                { title: 'Conditie', value: 'Gebruikt, maar in goede staat' },
-                { title: 'Veilingduur', value: '7 dagen' },
+                { title: 'Gebruikersnaam', value: 'bob' },
+                { title: 'Wachtwoord', value: 'bobpass' },
             ],
         ],
-    },
-
-    {
-        title: 'SQL tonen: query aangemaakte veiling',
-        values: [],
-    },
-
-    {
-        title: 'SQL: Eindtijd aanpassen naar 1 minuut (Televisie)',
-        values: [],
-    },
-
-    {
-        title: 'ACTIE: Switchen naar browser met Sophie account',
-        values: [],
-    },
-    {
-        title: 'Gebruiker B (Sophie): zoekt op "Televisie"',
-        values: [[{ title: 'Zoek term:', value: 'Televisie' }]],
-    },
-    {
-        title: 'Gebruiker B (Sophie): gaat naar Televisie veiling',
-        values: [],
-    },
-    {
-        title: 'Gebruiker B (Sophie): gaat bieden (wordt hoogste bod)',
-        values: [],
-    },
-
-    {
-        title: 'VEILING VERLOOPT',
-        values: [],
-    },
-
-    {
-        title: 'Mail: mails tonen over velopen veiling',
-        values: [],
-    },
-
-    {
-        title: 'JESPER NEEMT OVER',
-        values: [],
-    },
-
-    {
-        title: 'Gebruiker B (Sophie): uitloggen',
-        values: [],
-    },
-
-    {
-        title: 'Beheer: inloggen',
-        values: [
-            [
-                { title: 'E-mail', value: 'Administrator@EenmaalAndermaal.nl' },
-                { title: 'Wachtwoord', value: '1553CR3T!' },
-            ],
-        ],
-    },
-
-    {
-        title: 'BEHEER HANDLEIDING',
-        values: [],
-    },
-
-    {
-        title: 'Beheer: pagina tonen',
-        values: [],
-    },
-
-    {
-        title: 'Beheer: subrubriek aanmaken',
-        values: [[{ title: 'Rubriek controle naam', value: 'Interieur' }]],
-    },
-    {
-        title: 'Beheer: veiling blokkeren',
-        values: [],
-    },
-
-    {
-        title: 'Mail: geblokeerd mails tonen',
-        values: [],
-    },
-    {
-        title: 'Beheer: logboek',
-        values: [],
     },
 ];
 
